@@ -12,10 +12,9 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleFeedbackBtnClick = ({ currentTarget }) => {
-    const targetBtn = currentTarget.dataset.name;
+  handleFeedbackBtnClick = feedback => {
     this.setState(prevState => ({
-      [targetBtn]: prevState[targetBtn] + 1,
+      [feedback]: prevState[feedback] + 1,
     }));
   };
 
